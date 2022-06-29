@@ -1,0 +1,45 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type OtpGqlDto {
+  id: ID!
+  otp: String!
+  expiresAt: DateTime!
+  userId: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type SocialIdsGqlDto {
+  id: ID!
+  google: String
+  facebook: String
+  userId: String!
+}
+
+type UserGqlDto {
+  id: ID
+  alias: String
+  email: String
+  mobile: String
+  dob: String
+  firstName: String
+  lastName: String
+  avatar: String
+  isActive: Boolean
+  isLoggedIn: Boolean
+  isAdmin: Boolean
+  favoritePackets: [String!]
+  preferredTags: [String!]
+  otps: [OtpGqlDto!]
+  social: SocialIdsGqlDto
+}
+
+type Query {
+  hello: String!
+  getAllUsers: [UserGqlDto!]!
+}
