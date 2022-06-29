@@ -11,6 +11,8 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository, [Sequelize ORM](https://sequelize.org/), [GraphQL](https://docs.nestjs.com/graphql/quick-start) server with Multi-tenant & [Microservice](https://docs.nestjs.com/microservices/basics) (NATS) feature.
 
+In this application we have used separate database for each organizations. The databases will be automatically created when a request is received.
+
 ## Installation
 
 ```bash
